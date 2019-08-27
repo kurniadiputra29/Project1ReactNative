@@ -907,6 +907,7 @@ const style = StyleSheet.create({
     backgroundColor: '#fff',
     elevation: 3,
     width: Dimensions.get('window').width,
+    flex: 1,
     backgroundColor: '#FFF',
   },
   wrepper:{

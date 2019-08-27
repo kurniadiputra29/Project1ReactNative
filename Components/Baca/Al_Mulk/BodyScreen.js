@@ -268,6 +268,7 @@ const style = StyleSheet.create({
     elevation: 3,
     width: Dimensions.get('window').width,
     backgroundColor: '#FFF',
+    flex: 1,
   },
   wrepper:{
     paddingBottom: 20,

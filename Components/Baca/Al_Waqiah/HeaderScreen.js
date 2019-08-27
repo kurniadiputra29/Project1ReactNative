@@ -5,7 +5,10 @@ import {Text} from "native-base";
 
 export default class HeaderScreen extends Component{
   state = {
-    sidebar: 'false',
+    sidebar: false,
+    small: false,
+    medium: false,
+    large: false,
   }
 
   toSidebar(){
@@ -13,14 +16,24 @@ export default class HeaderScreen extends Component{
       sidebar: !this.state.sidebar
     })
   }
-  toKeutamaan(){
-    alert('Keutamaan')
+  toSmall(){
+    this.setState({
+      small: !this.state.small
+    })
+    alert(this.state.small)
+
   }
-  toAyat(){
-    alert('Ayat')
+  toMedium(){
+    this.setState({
+      medium: !this.state.medium
+    })
+    alert(this.state.medium)
   }
-  toAyatArti(){
-    alert('Ayat & Arti')
+  toLarge(){
+    this.setState({
+      large: !this.state.large
+    })
+    alert(this.state.large)
   }
 
   render(){
@@ -49,33 +62,28 @@ export default class HeaderScreen extends Component{
           </TouchableOpacity>
         </View>
       </View>
-      <View>
-        {this.state.sidebar== true
+      { this.state.sidebar == true
           ?(
-            <View style={style.sidebar}>
+            <View style={style.contain}>
               <TouchableOpacity 
-                style={style.button}
-                onPress={()=>this.toKeutamaan()}
-              >
-                <Text>Keutamaan</Text>
+              onPress={()=>this.toSmall()}
+              style={style.button}>
+                <Text style={{fontWeight: 'bold', fontSize: 15}}>Tampilkan Ayat</Text>
               </TouchableOpacity>
               <TouchableOpacity 
-                style={style.button}
-                onPress={()=>this.toAyat()}
-              >
-                <Text>Tampilkan Ayat</Text>
+              onPress={()=>this.toMedium()}
+              style={style.button}>
+                <Text style={{fontWeight: 'bold', fontSize: 15}}>Tampilkan Arti</Text>
               </TouchableOpacity>
               <TouchableOpacity 
-                style={style.button}
-                onPress={()=>this.toAyatArti()}
-              >
-                <Text>Tampilkan Ayat & Artinya</Text>
+              onPress={()=>this.toLarge()}
+              style={style.button}>
+                <Text style={{fontWeight: 'bold', fontSize: 15}}>Tampilkan Ayat & Arti</Text>
               </TouchableOpacity>
             </View>
           )
           :null
         }
-      </View>
       </View>
     )
   }
@@ -101,18 +109,21 @@ const style = StyleSheet.create({
   right: {
 
   },
-  sidebar:{
+  contain:{
+    alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'column',
-    padding: 15,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 15,
     backgroundColor: '#fff',
     elevation: 5,
     borderBottomWidth: 0.2,
-    marginLeft: '30%',
-    width: '70%',
+    width: '100%',
+    position: 'relative',
   },
   button:{
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingTop: 5,
+    paddingBottom: 5,
   },
 })

@@ -17,6 +17,5 @@ export default class App extends Component{
 const style = StyleSheet.create({
   container:{
     flex: 1,
-    paddingBottom: 60,
   },
 })

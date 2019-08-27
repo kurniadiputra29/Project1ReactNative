@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, ScrollView, TouchableOpacity, StatusBar} from 'react-native';
 import {Text, Tab, TabHeading, Tabs} from "native-base";
+import { Icon } from 'react-native-elements';
+
 export default class Home extends Component{
 
 	toAl_Mulk(){
@@ -63,6 +65,20 @@ export default class Home extends Component{
 		return(
 			<ScrollView>
 			<StatusBar backgroundColor="#007bb6" barStyle="light-content" />
+			<View>
+	      <View style={style.containerTop}>
+	        <View style={style.left}>
+	        </View>
+	        <View style={style.tengah}>
+	          <Text style={style.texttengah}>Surah Pilihan Dalam Al Qur'an</Text>
+	        </View>
+	        <View style={style.right}>
+	          <TouchableOpacity>
+	          <Icon name="more-vert" size={27} color="#fff"/>
+	          </TouchableOpacity>
+	        </View>
+	      </View>
+			</View>
 			<Tabs>
 				<Tab heading="Keutamaan" tabStyle={{backgroundColor: '#007bb6'}} textStyle={{color: '#fff'}} activeTabStyle={{backgroundColor: '#007bb6'}} activeTextStyle={{color: '#fff', fontWeight: 'normal'}}>
 					<View style={style.tab}>
@@ -222,6 +238,26 @@ export default class Home extends Component{
 	}
 }
 const style = StyleSheet.create({
+	containerTop:{
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    padding: 15,
+    backgroundColor: '#007bb6',
+    elevation: 5,
+    borderBottomWidth: 0.2,
+    width: '100%',
+  },
+  left:{
+
+  },
+  texttengah:{
+    fontWeight: 'bold',
+    fontSize: 20,
+   	color: 'white',
+  },
+  right: {
+
+  },
 	tab:{
 		marginTop: 10,
 	},

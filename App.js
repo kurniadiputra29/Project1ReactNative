@@ -26,14 +26,7 @@ const a = createStackNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions:{
-      title: "9 Surah Pilihan Dalam Al Qur'an",
-      headerStyle: {
-        backgroundColor: '#007bb6',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+      header: null,
     }
   },
   Al_Mulk_Baca:{

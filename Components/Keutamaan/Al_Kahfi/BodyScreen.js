@@ -53,6 +53,7 @@ const style = StyleSheet.create({
     elevation: 3,
     width: Dimensions.get('window').width,
     backgroundColor: '#FFF',
+    flex: 1,
   },
   bismillah:{
     backgroundColor: '#D3EDEF',
