@@ -14,17 +14,17 @@ export default class BodyScreen extends Component{
           </Text>
         </View>
         <View style={style.contentA}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Terhindar dari sikap lalai. “Barang siapa yang membaca surat Al-Waqiah, maka ia akan dicatat tidak tergolong pada orang-orang yang lalai.”
           </Text>
         </View>
         <View style={style.contentB}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Dijauhkan dari kefakiran. Rasulullah bersabda dalam sebuah hadits bahwa “Barang siapa yang membaca surat Al-Waqiah, ia tidak akan tertimpa kefakiran selamanya.”
           </Text>
         </View>
         <View style={style.contentA}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Tidak akan tertimpa kemiskinan selamanya. “Dari Abdullah bin Mas’ud mendengar Rasulullah SAW bersabda, ‘Barang siapa yang membaca surat Al-Waqiah setiap malam maka dirinya tidak akan ditimpa kemiskinan selama-lamanya’.”
           </Text>
         </View>
@@ -66,7 +66,6 @@ const style = StyleSheet.create({
   innerText:{
     marginBottom: 20,
     marginTop: 10,
-    fontSize: 15,
     color: '#262626',
     lineHeight: 25,
   },

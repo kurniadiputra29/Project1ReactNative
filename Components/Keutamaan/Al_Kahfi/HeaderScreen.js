@@ -6,9 +6,6 @@ import {Text} from "native-base";
 export default class HeaderScreen extends Component{
   state = {
     sidebar: false,
-    small: false,
-    medium: false,
-    large: false,
   }
 
   toSidebar(){
@@ -16,24 +13,9 @@ export default class HeaderScreen extends Component{
       sidebar: !this.state.sidebar
     })
   }
-  toSmall(){
-    this.setState({
-      small: !this.state.small
-    })
-    alert(this.state.small)
-
-  }
-  toMedium(){
-    this.setState({
-      medium: !this.state.medium
-    })
-    alert(this.state.medium)
-  }
-  toLarge(){
-    this.setState({
-      large: !this.state.large
-    })
-    alert(this.state.large)
+  changeSize(size){
+    this.props.indukRef(size);
+    this.toSidebar();
   }
 
   render(){
@@ -67,17 +49,17 @@ export default class HeaderScreen extends Component{
           ?(
             <View style={style.contain}>
               <TouchableOpacity 
-              onPress={()=>this.toSmall()}
+              onPress={()=>this.changeSize(12)}
               style={style.button}>
                 <Text style={{fontWeight: 'bold', fontSize: 12}}>Small</Text>
               </TouchableOpacity>
               <TouchableOpacity 
-              onPress={()=>this.toMedium()}
+              onPress={()=>this.changeSize(15)}
               style={style.button}>
                 <Text style={{fontWeight: 'bold', fontSize: 15}}>Medium</Text>
               </TouchableOpacity>
               <TouchableOpacity 
-              onPress={()=>this.toLarge()}
+              onPress={()=>this.changeSize(18)}
               style={style.button}>
                 <Text style={{fontWeight: 'bold', fontSize: 18}}>Large</Text>
               </TouchableOpacity>

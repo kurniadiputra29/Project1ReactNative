@@ -6,9 +6,6 @@ import {Text} from "native-base";
 export default class HeaderScreen extends Component{
   state = {
     sidebar: false,
-    small: false,
-    medium: false,
-    large: false,
   }
 
   toSidebar(){
@@ -16,24 +13,9 @@ export default class HeaderScreen extends Component{
       sidebar: !this.state.sidebar
     })
   }
-  toSmall(){
-    this.setState({
-      small: !this.state.small
-    })
-    alert(this.state.small)
-
-  }
-  toMedium(){
-    this.setState({
-      medium: !this.state.medium
-    })
-    alert(this.state.medium)
-  }
-  toLarge(){
-    this.setState({
-      large: !this.state.large
-    })
-    alert(this.state.large)
+  changeDestop(destop){
+    this.props.indukRef(destop);
+    this.toSidebar();
   }
 
   render(){
@@ -66,17 +48,17 @@ export default class HeaderScreen extends Component{
           ?(
             <View style={style.contain}>
               <TouchableOpacity 
-              onPress={()=>this.toSmall()}
+              onPress={()=>this.changeDestop('Ayat')}
               style={style.button}>
                 <Text style={{fontWeight: 'bold', fontSize: 15}}>Tampilkan Ayat</Text>
               </TouchableOpacity>
               <TouchableOpacity 
-              onPress={()=>this.toMedium()}
+              onPress={()=>this.changeDestop('Arti')}
               style={style.button}>
                 <Text style={{fontWeight: 'bold', fontSize: 15}}>Tampilkan Arti</Text>
               </TouchableOpacity>
               <TouchableOpacity 
-              onPress={()=>this.toLarge()}
+              onPress={()=>this.changeDestop('Ayat_Arti')}
               style={style.button}>
                 <Text style={{fontWeight: 'bold', fontSize: 15}}>Tampilkan Ayat & Arti</Text>
               </TouchableOpacity>

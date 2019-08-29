@@ -14,27 +14,27 @@ export default class BodyScreen extends Component{
           </Text>
         </View>
         <View style={style.contentA}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Menjaga dari fitnah Dajjal. “Barang siapa yang berada di zaman dajal hendaknya membaca ayat-ayat pertama di surat Al-Kahfi.” (HR Muslim)
           </Text>
         </View>
         <View style={style.contentB}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Rumahnya tidak akan dimasuki setan. Ibnu Mardawaih meriwayatkan dari Abdullah bin Mughaffal, “Rumah yang dibacakan di dalamnya surah Al-Kahfi atau Al-Baqarah tidak akan dimasuki oleh setan sepanjang malam.”
           </Text>
         </View>
         <View style={style.contentA}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Dipancarkan cahaya sejauh dirinya dan Ka’bah. Diriwayatkan dari Sahabat Abu Sa’id al-Khudri bahwa Nabi Saw bersabda: “Barangsiapa membaca surat al-Kahfi pada malam Jum’at, maka dipancarkan cahaya untuknya sejauh antara dirinya dia dan Baitul ‘Atiq (Ka’bah).” (Sunan Ad-Darimi, no. 3273)
           </Text>
         </View>
         <View style={style.contentB}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Dipancarkan cahaya di antara dua Jumat. Dalam riwayat lain, masih dari Abu Sa’id al-Khudri ra, “Barangsiapa membaca surat Al-Kahfi pada hari Jumat, maka akan dipancarkan cahaya untuknya di antara dua Jumat.”
           </Text>
         </View>
         <View style={style.contentA}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Menerangi di hari Kiamat. Abdullah bin Umar ra berkata: Rasulullah Saw bersabda, “Siapa yang membaca surat Al-Kahfi pada hari Jum’at, maka akan memancar cahaya dari bawah kakinya sampai ke langit, akan meneranginya kelak pada hari kiamat, dan diampuni dosanya antara dua jumat.”
           </Text>
         </View>
@@ -76,7 +76,6 @@ const style = StyleSheet.create({
   innerText:{
     marginBottom: 20,
     marginTop: 10,
-    fontSize: 15,
     color: '#262626',
     lineHeight: 25,
   },

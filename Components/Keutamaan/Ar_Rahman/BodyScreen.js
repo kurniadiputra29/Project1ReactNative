@@ -14,7 +14,7 @@ export default class BodyScreen extends Component{
           </Text>
         </View>
         <View style={style.contentA}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Rasulullah shallahu alaihi wasallam bersabda, “Barangsiapa membaca surat Ar-Rahman, Allah akan menyayangi kelemahannya dan meridhai nikmat yang dikaruniakan kepadanya”.
           </Text>
         </View>
@@ -55,7 +55,6 @@ const style = StyleSheet.create({
   innerText:{
     marginBottom: 20,
     marginTop: 10,
-    fontSize: 15,
     color: '#262626',
     lineHeight: 25,
   },

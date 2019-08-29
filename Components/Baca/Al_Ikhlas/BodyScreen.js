@@ -7,45 +7,124 @@ export default class BodyScreen extends Component{
     return(
       <View style={style.container}>
       <ScrollView style={style.wrepper}>
-      <Content style={{backgroundColor: '#F3FEFF' }}>
-        <View style={style.bismillah}>
-          <Text style={style.innerBismillah}>
-            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
-          </Text>
-        </View>
-        <View style={style.contentA}>
-          <Text style={style.arab}>
-            قُلْ هُوَ اللَّهُ أَحَدٌ ﴿١﴾
-          </Text>
-          <Text style={style.innerText}>
-            Katakanlah: "Dialah Allah, Yang Maha Esa.
-          </Text>
-        </View>
-        <View style={style.contentB}>
-          <Text style={style.arab}>
-            اللَّهُ الصَّمَدُ ﴿٢﴾
-          </Text>
-          <Text style={style.innerText}>
-            Allah adalah Tuhan yang bergantung kepada-Nya segala sesuatu.
-          </Text>
-        </View>
-        <View style={style.contentA}>
-          <Text style={style.arab}>
-            لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿٣﴾
-          </Text>
-          <Text style={style.innerText}>
-            Dia tiada beranak dan tidak pula diperanakkan,
-          </Text>
-        </View>
-        <View style={style.contentB}>
-          <Text style={style.arab}>
-            وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ﴿٤﴾
-          </Text>
-          <Text style={style.innerText}>
-            dan tidak ada seorangpun yang setara dengan Dia".
-          </Text>
-        </View>
-      </Content>
+
+      { this.props.destop == 'Ayat_Arti'
+        ?(
+          <Content style={{backgroundColor: '#F3FEFF' }}>
+            <View style={style.bismillah}>
+              <Text style={style.innerBismillah}>
+                بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+              </Text>
+            </View>
+            <View style={style.contentA}>
+              <Text style={style.arab}>
+                قُلْ هُوَ اللَّهُ أَحَدٌ ﴿١﴾
+              </Text>
+              <Text style={style.innerText}>
+                <Text style={{fontWeight: 'bold'}}>1. </Text>
+                Katakanlah: "Dialah Allah, Yang Maha Esa.
+              </Text>
+            </View>
+            <View style={style.contentB}>
+              <Text style={style.arab}>
+                اللَّهُ الصَّمَدُ ﴿٢﴾
+              </Text>
+              <Text style={style.innerText}>
+                <Text style={{fontWeight: 'bold'}}>2. </Text>
+                Allah adalah Tuhan yang bergantung kepada-Nya segala sesuatu.
+              </Text>
+            </View>
+            <View style={style.contentA}>
+              <Text style={style.arab}>
+                لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿٣﴾
+              </Text>
+              <Text style={style.innerText}>
+                <Text style={{fontWeight: 'bold'}}>3. </Text>
+                Dia tiada beranak dan tidak pula diperanakkan,
+              </Text>
+            </View>
+            <View style={style.contentB}>
+              <Text style={style.arab}>
+                وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ﴿٤﴾
+              </Text>
+              <Text style={style.innerText}>
+                <Text style={{fontWeight: 'bold'}}>4. </Text>
+                dan tidak ada seorangpun yang setara dengan Dia".
+              </Text>
+            </View>
+          </Content>
+        )
+        : null
+      }
+      { this.props.destop == 'Ayat'
+        ?(
+          <Content style={{backgroundColor: '#F3FEFF' }}>
+            <View style={style.bismillah}>
+              <Text style={style.innerBismillah}>
+                بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+              </Text>
+            </View>
+            <View style={style.contentA}>
+              <Text style={style.arab}>
+                قُلْ هُوَ اللَّهُ أَحَدٌ ﴿١﴾
+              </Text>
+            </View>
+            <View style={style.contentB}>
+              <Text style={style.arab}>
+                اللَّهُ الصَّمَدُ ﴿٢﴾
+              </Text>
+            </View>
+            <View style={style.contentA}>
+              <Text style={style.arab}>
+                لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿٣﴾
+              </Text>
+            </View>
+            <View style={style.contentB}>
+              <Text style={style.arab}>
+                وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ﴿٤﴾
+              </Text>
+            </View>
+          </Content>
+        )
+        : null
+      }
+      { this.props.destop == 'Arti'
+        ?(
+          <Content style={{backgroundColor: '#F3FEFF' }}>
+            <View style={style.bismillah}>
+              <Text style={style.innerBismillah}>
+                بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+              </Text>
+            </View>
+            <View style={style.contentA}>
+              <Text style={style.innerText}>
+                <Text style={{fontWeight: 'bold'}}>1. </Text>
+                Katakanlah: "Dialah Allah, Yang Maha Esa.
+              </Text>
+            </View>
+            <View style={style.contentB}>
+              <Text style={style.innerText}>
+                <Text style={{fontWeight: 'bold'}}>2. </Text>
+                Allah adalah Tuhan yang bergantung kepada-Nya segala sesuatu.
+              </Text>
+            </View>
+            <View style={style.contentA}>
+              <Text style={style.innerText}>
+                <Text style={{fontWeight: 'bold'}}>3. </Text>
+                Dia tiada beranak dan tidak pula diperanakkan,
+              </Text>
+            </View>
+            <View style={style.contentB}>
+              <Text style={style.innerText}>
+                <Text style={{fontWeight: 'bold'}}>4. </Text>
+                dan tidak ada seorangpun yang setara dengan Dia".
+              </Text>
+            </View>
+          </Content>
+        )
+        : null
+      }
+          
       </ScrollView>
       </View>
     )

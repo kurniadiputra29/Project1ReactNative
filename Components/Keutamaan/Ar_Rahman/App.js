@@ -4,11 +4,25 @@ import HeaderScreen from './HeaderScreen';
 import BodyScreen from './BodyScreen';
 
 export default class App extends Component{
+  state={
+    size: 15,
+  };
+  induxMethod(menerimaArg){
+    this.setState({
+      size: menerimaArg
+    })
+  }
+
   render(){
     return(
       <View style={style.container}>
-        <HeaderScreen backButton={true} nav={this.props.navigation}/>
-        <BodyScreen />
+        <HeaderScreen 
+          backButton={true} 
+          nav={this.props.navigation}
+          onRef={(ref)=>(this.indukRef=ref)}
+          indukRef={this.induxMethod.bind(this)}
+        />
+        <BodyScreen size={this.state.size}/>
       </View>
     )
   }

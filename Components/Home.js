@@ -60,12 +60,24 @@ export default class Home extends Component{
 	toAn_Nas_K(){
 			this.props.navigation.navigate('An_Nas_K');
 	}
+	state = {
+    sidebar: false,
+  }
+
+  toSidebar(){
+    this.setState({
+      sidebar: !this.state.sidebar
+    })
+  }
+  toInfo(){
+			this.props.navigation.navigate('Info');
+	}
 
 	render(){
 		return(
 			<ScrollView>
 			<StatusBar backgroundColor="#007bb6" barStyle="light-content" />
-			<View>
+			<View style={{flex: 1}}>
 	      <View style={style.containerTop}>
 	        <View style={style.left}>
 	        </View>
@@ -73,11 +85,25 @@ export default class Home extends Component{
 	          <Text style={style.texttengah}>Surah Pilihan Dalam Al Qur'an</Text>
 	        </View>
 	        <View style={style.right}>
-	          <TouchableOpacity>
+	          <TouchableOpacity
+	          	onPress={()=>this.toSidebar()}
+	          >
 	          <Icon name="more-vert" size={27} color="#fff"/>
 	          </TouchableOpacity>
 	        </View>
 	      </View>
+	      { this.state.sidebar == true
+          ?(
+            <View style={style.contain}>
+              <TouchableOpacity 
+              onPress={()=>this.toInfo()}
+              style={style.button}>
+                <Text style={{fontWeight: 'bold', fontSize: 15}}>Info Aplikasi</Text>
+              </TouchableOpacity>
+            </View>
+          )
+          :null
+        }
 			</View>
 			<Tabs>
 				<Tab heading="Keutamaan" tabStyle={{backgroundColor: '#007bb6'}} textStyle={{color: '#fff'}} activeTabStyle={{backgroundColor: '#007bb6'}} activeTextStyle={{color: '#fff', fontWeight: 'normal'}}>
@@ -241,7 +267,10 @@ const style = StyleSheet.create({
 	containerTop:{
     justifyContent: 'space-between',
     flexDirection: 'row',
-    padding: 15,
+    paddingTop: 15,
+    paddingBottom: 15,
+    paddingLeft: 5,
+    paddingRight: 5,
     backgroundColor: '#007bb6',
     elevation: 5,
     borderBottomWidth: 0.2,
@@ -280,4 +309,23 @@ const style = StyleSheet.create({
 	innerText:{
 		color: 'white',
 	},
+	contain:{
+    paddingLeft: 20,
+    marginLeft: '50%',
+    paddingRight: 20,
+    paddingBottom: 10,
+    paddingTop: 10,
+    backgroundColor: '#fff',
+    elevation: 5,
+    borderBottomWidth: 0.2,
+    width: '50%',
+    position: 'relative',
+    alignItems: 'flex-end',
+  },
+  button:{
+    paddingTop: 5,
+    paddingBottom: 5,
+    width: '100%',
+    alignItems: 'center',
+  },
 })

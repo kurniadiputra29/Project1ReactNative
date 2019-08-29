@@ -14,17 +14,17 @@ export default class BodyScreen extends Component{
           </Text>
         </View>
         <View style={style.contentA}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Dalam sebuah hadist Rasulullah pernah berfirman, “Barang siapa yang membaca surat Al-Fatihah, Al-Ikhlas, Al-Falaq dan An-Naas tujuh kali sesudah shalat Jumat niscaya terpelihara dari perkara keji dan segala hingga hari Jumat yang akan datang”.
           </Text>
         </View>
         <View style={style.contentB}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Rasullulah bersabda, “Bacalah surat Al-Ikhlas serta surat Al-Mu’awwidzatain (Al-Falaq dan An-Naas) pada waktu pagi dan petang hari sebanyak tiga kali , maka kamu akan dilindungi dari segala gangguan.” (Shahih Tirmidzi no. 2897 dengan sanad hasan gharib).
           </Text>
         </View>
         <View style={style.contentA}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Imam Malik meriwayatkan dari ‘Aisyah, bahwa apabila Rasullulah SAW sakit, beliau membaca Al-Mu’awwidzatain atas dirinya dan beliau meniupkannya. Ketika sakitnya semakin parah, maka aku membacakannya untuk beliau, dan aku usapkan kepada beliau dengan tangan beliau sendiri untuk mengharapkan barakahnya. (HR Bukhari dalam Fat-hul Baari (VIII/679), Abu Dawud (IV/220), An-Nasai dalam al-Kubraa (IV/867 dan 868) dan Ibnu Majah (II/1166)
           </Text>
         </View>
@@ -66,7 +66,6 @@ const style = StyleSheet.create({
   innerText:{
     marginBottom: 20,
     marginTop: 10,
-    fontSize: 15,
     color: '#262626',
     lineHeight: 25,
   },

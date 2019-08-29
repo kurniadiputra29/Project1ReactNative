@@ -14,17 +14,17 @@ export default class BodyScreen extends Component{
           </Text>
         </View>
         <View style={style.contentA}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Dari Abu Hurairah ia berkata, Rasulullah bersabda: “Barang siapa membaca HAA MIIM (surat) Ad Dukhaan pada malam Jumat, maka (dosa-dosanya) akan diampuni.” (HR Thirmidzi no. 2814)
           </Text>
         </View>
         <View style={style.contentB}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Dari Abu Umamah r.a, bahwa sesungguhnya dia telah mendengar Rasulullah bersabda: “Barang siapa membaca surat Haamimm Ad-Dukhaan pada malam Jumat atau pada hari Jumat Allah, akan membangunkan untuknya satu rumah di surga “. (HR Thabrani)
           </Text>
         </View>
         <View style={style.contentA}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Baginda SAW juga bersabda, “Orang yang membaca surat Ad-Dukhaan pada malam Jumat akan dimintakan ampun (atas dosa-dosanya) menjelang paginya oleh 70.000 malaikat.”
           </Text>
         </View>
@@ -66,7 +66,6 @@ const style = StyleSheet.create({
   innerText:{
     marginBottom: 20,
     marginTop: 10,
-    fontSize: 15,
     color: '#262626',
     lineHeight: 25,
   },

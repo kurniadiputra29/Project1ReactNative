@@ -14,7 +14,7 @@ export default class BodyScreen extends Component{
           </Text>
         </View>
         <View style={style.contentA}>
-          <Text style={style.innerText}>
+          <Text style={[style.innerText, {fontSize: this.props.size}]}>
             Surat Al Mulk memiliki fadhilah luar biasa yaitu untuk mencegah siksa kubur. Dari ‘Abdullah bin Mas’ud, ia berkata, “Barangsiapa membaca “Tabaraokalladzi bi yadihil mulk” (surat Al Mulk) setiap malam, maka Allah akan menghalanginya dari siksa kubur. Kami di masa Rasulullah shallallahu ‘alaihi wa sallam menamakan surat tersebut “Al-Mani’ah” (penghalang dari siksa kubur).  Dia adalah salah satu surat di dalam kitabullah. Barangsiapa membacanya setiap malam, maka ia telah memperbanyak dan telah berbuat kebaikan.” (HR. An Nasai dalam Al Kabir 6/179 dan Al Hakim. Hakim mengatakan bahwa sanad hadits tersebut shahih)
           </Text>
         </View>
@@ -56,7 +56,6 @@ const style = StyleSheet.create({
   innerText:{
     marginBottom: 20,
     marginTop: 10,
-    fontSize: 15,
     color: '#262626',
     lineHeight: 25,
   },
