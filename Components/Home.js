@@ -60,15 +60,7 @@ export default class Home extends Component{
 	toAn_Nas_K(){
 			this.props.navigation.navigate('An_Nas_K');
 	}
-	state = {
-    sidebar: false,
-  }
-
-  toSidebar(){
-    this.setState({
-      sidebar: !this.state.sidebar
-    })
-  }
+	
   toInfo(){
 			this.props.navigation.navigate('Info');
 	}
@@ -86,24 +78,12 @@ export default class Home extends Component{
 	        </View>
 	        <View style={style.right}>
 	          <TouchableOpacity
-	          	onPress={()=>this.toSidebar()}
+	          	onPress={()=>this.toInfo()}
 	          >
-	          <Icon name="more-vert" size={27} color="#fff"/>
+	          	<Icon name="info" size={27} color="#fff"/>
 	          </TouchableOpacity>
 	        </View>
 	      </View>
-	      { this.state.sidebar == true
-          ?(
-            <View style={style.contain}>
-              <TouchableOpacity 
-              onPress={()=>this.toInfo()}
-              style={style.button}>
-                <Text style={{fontWeight: 'bold', fontSize: 15}}>Info Aplikasi</Text>
-              </TouchableOpacity>
-            </View>
-          )
-          :null
-        }
 			</View>
 			<Tabs>
 				<Tab heading="Keutamaan" tabStyle={{backgroundColor: '#007bb6'}} textStyle={{color: '#fff'}} activeTabStyle={{backgroundColor: '#007bb6'}} activeTextStyle={{color: '#fff', fontWeight: 'normal'}}>
@@ -270,7 +250,7 @@ const style = StyleSheet.create({
     paddingTop: 15,
     paddingBottom: 15,
     paddingLeft: 5,
-    paddingRight: 5,
+    paddingRight: 15,
     backgroundColor: '#007bb6',
     elevation: 5,
     borderBottomWidth: 0.2,
