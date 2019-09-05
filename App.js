@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text, StatusBar} from 'react-native';
 import {createStackNavigator, createAppContainer} from "react-navigation";
+import SplashScreen from 'react-native-splash-screen';
 import HomeScreen from './Components/Home';
 import Info from './Components/Info';
 import Al_Mulk_Baca from './Components/Baca/Al_Mulk/App';
@@ -156,6 +157,11 @@ const a = createStackNavigator({
 const AppContainer = createAppContainer(a);
 
 export default class App extends Component{
+  componentDidMount() {
+    // do stuff while splash screen is shown
+      // After having done stuff (such as async tasks) hide the splash screen
+      SplashScreen.hide();
+  }
   render(){
     return(
       <AppContainer/>

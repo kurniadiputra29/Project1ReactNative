@@ -13,7 +13,7 @@ export default class HeaderScreen extends Component{
 				<View style={{alignItems: 'center', marginTop: 15}}>
 					<Image
 	          style={{width: 150, height: 150,}}
-	          source={require('./icon.jpeg')}
+	          source={require('./icon2.png')}
 	        />
 	        <Text style={{fontWeight: 'bold'}}>
 	        أفضل السور
