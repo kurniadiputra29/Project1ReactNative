@@ -3,6 +3,8 @@ import {StyleSheet, View, Text, StatusBar} from 'react-native';
 import {createStackNavigator, createAppContainer} from "react-navigation";
 import SplashScreen from 'react-native-splash-screen';
 import HomeScreen from './Components/Home';
+import Menu1Screen from './Components/Menu1';
+import Menu2Screen from './Components/Menu2';
 import Info from './Components/Info';
 import Al_Mulk_Baca from './Components/Baca/Al_Mulk/App';
 import Al_Kahfi_Baca from './Components/Baca/Al_Kahfi/App';
@@ -27,6 +29,18 @@ import An_Nas_K from './Components/Keutamaan/An_Nas/App';
 const a = createStackNavigator({
   Home: {
     screen: HomeScreen,
+    navigationOptions:{
+      header: null,
+    }
+  },
+  Menu1: {
+    screen: Menu1Screen,
+    navigationOptions:{
+      header: null,
+    }
+  },
+  Menu2: {
+    screen: Menu2Screen,
     navigationOptions:{
       header: null,
     }
@@ -144,7 +158,7 @@ const a = createStackNavigator({
     navigationOptions:{
       title: "Info Aplikasi",
       headerStyle: {
-        backgroundColor: '#007bb6',
+        backgroundColor: '#00b0d4',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {

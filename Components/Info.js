@@ -13,9 +13,9 @@ export default class HeaderScreen extends Component{
 				<View style={{alignItems: 'center', marginTop: 15}}>
 					<Image
 	          style={{width: 150, height: 150,}}
-	          source={require('./icon2.png')}
+	          source={require('./Icon/icon2.png')}
 	        />
-	        <Text style={{fontWeight: 'bold'}}>
+	        <Text style={{fontWeight: 'bold', marginTop: 10,}}>
 	        أفضل السور
 	        </Text>
 	        <Text style={{fontWeight: 'bold'}}>
