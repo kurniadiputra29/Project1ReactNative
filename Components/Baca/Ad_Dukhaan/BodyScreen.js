@@ -1240,7 +1240,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#fff',
     elevation: 3,
-    width: Dimensions.get('window').width,
+    width: '100%',
     flex: 1,
     backgroundColor: '#FFF',
   },

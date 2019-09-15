@@ -56,7 +56,7 @@ export default class Menu1 extends Component{
 								<View style={{justifyContent: 'center', alignItems: 'center'}}>
 									<Image
 										source={require('./Icon/icon9.png')}
-										style={{height: 40, width: Dimensions.get('window').width-180}}
+										style={{height: 40, width: 150}}
 									/>
 								</View>
 								<View style={{justifyContent: 'center', alignItems: 'center'}}>
@@ -220,7 +220,7 @@ const style = StyleSheet.create({
 		alignItems: 'center',
 	},
 	imageMenu:{
-		width: Dimensions.get('window').width-100,
+		width: 255,
 		height: 80,
 		margin: 15,
 	},

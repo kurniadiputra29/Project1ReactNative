@@ -48,10 +48,10 @@ export default class Menu2 extends Component{
 							<View style={style.containerTop}>
 								<View style={{justifyContent: 'center', alignItems: 'center'}}>
 									<TouchableOpacity
-			            onPress={() => this.goBack()}
-			            >
-			              <Icon name="arrow-back" size={27} color="#fff"/>
-			            </TouchableOpacity>
+									onPress={() => this.goBack()}
+									>
+										<Icon name="arrow-back" size={27} color="#fff"/>
+									</TouchableOpacity>
 								</View>
 								<View style={{justifyContent: 'center', alignItems: 'center'}}>
 									<Image
@@ -220,7 +220,7 @@ const style = StyleSheet.create({
 		alignItems: 'center',
 	},
 	imageMenu:{
-		width: Dimensions.get('window').width-100,
+		width: 255,
 		height: 80,
 		margin: 15,
 	},

@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import { Icon } from 'react-native-elements';
 import {Text} from "native-base";
 
 export default class HeaderScreen extends Component{
+
+  toAl_Mulk_K(){
+      this.props.nav.navigate('Al_Mulk_K');
+  }
+
   state = {
     sidebar: false,
   }
@@ -39,6 +44,15 @@ export default class HeaderScreen extends Component{
           <Text style={style.texttengah}>Al Mulk</Text>
         </View>
         <View style={style.right}>
+          <TouchableOpacity 
+            onPress={()=> this.toAl_Mulk_K()}
+            style={{marginRight: 10,}}
+          >
+            <Image
+              source={require('../../Icon/book.png')}
+              style={{width: 27, height: 27,}}
+            />
+          </TouchableOpacity>
           <TouchableOpacity onPress={()=>this.toSidebar()}>
           <Icon name="menu" size={27}/>
           </TouchableOpacity>
@@ -89,7 +103,7 @@ const style = StyleSheet.create({
     fontSize: 20,
   },
   right: {
-
+    flexDirection: 'row',
   },
   sidebar:{
     justifyContent: 'space-between',

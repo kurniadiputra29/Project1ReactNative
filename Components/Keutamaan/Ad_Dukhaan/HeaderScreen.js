@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import { Icon } from 'react-native-elements';
 import {Text} from "native-base";
 
 export default class HeaderScreen extends Component{
+	toAd_Dukhaan(){
+			this.props.nav.navigate('Ad_Dukhaan_Baca');
+	}
 	state = {
 		sidebar: false,
 	}
@@ -36,9 +39,18 @@ export default class HeaderScreen extends Component{
 				}
 				</View>
 				<View style={style.tengah}>
-					<Text style={style.texttengah}>Ad Dukhaan</Text>
+					<Text style={style.texttengah}>Ad Dukhan</Text>
 				</View>
 				<View style={style.right}>
+				<TouchableOpacity 
+						onPress={()=> this.toAd_Dukhaan()}
+						style={{marginRight: 10,}}
+					>
+						<Image
+							source={require('../../Icon/book.png')}
+							style={{width: 27, height: 27,}}
+						/>
+					</TouchableOpacity>
 					<TouchableOpacity onPress={()=>this.toSidebar()}>
 					<Icon name="menu" size={27}/>
 					</TouchableOpacity>
@@ -92,7 +104,7 @@ const style = StyleSheet.create({
 		fontSize: 20,
 	},
 	right: {
-
+		flexDirection: 'row',
 	},
 	contain:{
 		alignItems: 'center',
